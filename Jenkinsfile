@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/jjmarkcosta/Jenkins_Practice_Project.git'
+                git 'https://github.com/jjmarkcosta/Course-4-Project.git'
                 bat "mvn compile"
             }
         }
