@@ -14,12 +14,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "mvn compile"
+                sh "mvn test"
             }
         }
         stage('Deploy') {
             steps {
-                sh "mvn compile"
+                sh "mvn package"
             }
         }
     }
