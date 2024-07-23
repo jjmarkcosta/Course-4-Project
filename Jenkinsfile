@@ -9,17 +9,17 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/jjmarkcosta/Course-4-Project.git'
-                sh "mvn compile"
+                bat "mvn compile"
             }
         }
         stage('Test') {
             steps {
-                sh "mvn test"
+                bat "mvn test"
             }
         }
         stage('Deploy') {
             steps {
-                sh "mvn package"
+                bat "mvn package"
             }
         }
     }
