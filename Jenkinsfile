@@ -2,24 +2,24 @@ pipeline {
     agent any
 
     tools{
-        maven 'Maven'
+        maven 'maven'
     }
 
     stages {
         stage('Build') {
             steps {
                 git 'https://github.com/jjmarkcosta/Course-4-Project.git'
-                bat "mvn compile"
+                sh "mvn compile"
             }
         }
         stage('Test') {
             steps {
-                bat "mvn test"
+                sh "mvn test"
             }
         }
         stage('Deploy') {
             steps {
-                bat "mvn package"
+                sh "mvn package"
             }
         }
     }
